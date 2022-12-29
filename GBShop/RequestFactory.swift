@@ -27,4 +27,29 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeLogoutRequestFactory() -> AuthRequestFactory {
+            let errorParser = makeErrorParser()
+            return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        }
+        
+        func makeChangeDataUserRequsetFactory() -> ChangeUserDataRequestFactory {
+            let errorParser = makeErrorParser()
+            return ChangeUserData(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        }
+        
+        func makeRegisterRequestFactory() -> RegisterRequestFactory {
+            let errorParser = makeErrorParser()
+            return Register(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        }
+        
+        func makeCatalogRequestFactory() -> ProductRequestFactory {
+            let errorParser = makeErrorParser()
+            return Products(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        }
+        
+        func makeProductRequestFactory() -> ProductRequestFactory {
+            let errorParser = makeErrorParser()
+            return Products(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+        }
 }

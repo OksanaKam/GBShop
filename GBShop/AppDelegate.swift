@@ -26,14 +26,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        
+        let logout = requestFactory.makeLogoutRequestFactory()
+        logout.logout(idUser: 123) { response in
+            switch response.result {
+            case .success(let logout):
+                print(logout)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let changeUserData = requestFactory.makeChangeDataUserRequsetFactory()
+        changeUserData.changeUserData(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru") { response in
+            switch response.result {
+            case .success(let changeUserData):
+                print(changeUserData)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let registration = requestFactory.makeRegisterRequestFactory()
+        registration.register(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru") { response in
+            switch response.result {
+            case .success(let registration):
+                print(registration)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let catalog = requestFactory.makeCatalogRequestFactory()
+        catalog.getProductData(pageNumber: 1, categoryId: 1) { response in
+            switch response.result {
+            case .success(let catalog):
+                print(catalog)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let good = requestFactory.makeProductRequestFactory()
+        good.getProduct(productId: 123) { response in
+            switch response.result {
+            case .success(let good):
+                print(good)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
-/*
+
+    /*
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
-*/
+     */
+
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
