@@ -193,6 +193,51 @@ final class ResponseCodableTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    func testApproveReviewResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/approveReview.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<CatalogDataResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testAddReviewResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addReview.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<CatalogDataResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testRemoveReviewResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/removeReview.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<CatalogDataResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
 
     func testExample() throws {
         // This is an example of a functional test case.
