@@ -60,6 +60,64 @@ struct CatalogDataResultStub: Codable {
     }
 }
 
+struct ApproveReviewResultStub: Codable {
+    let result: Int
+    let approveReview: [Review]
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case approveReview
+    }
+}
+
+struct AddReviewResultStub: Codable {
+    let result: Int
+    let userMessage: String
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case userMessage = "user_message"
+    }
+}
+
+struct RemoveReviewResultStub: Codable {
+    let result: Int
+    let userMessage: String
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case userMessage = "user_message"
+    }
+}
+
+struct AddBasketResultStub: Codable {
+    let result: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+    }
+}
+
+struct DeleteBasketResultStub: Codable {
+    let result: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+    }
+}
+
+struct GetBasketResultStub: Codable {
+    var amount: Int
+    var countGoods: Int
+    var contents: [BasketResult]
+        
+    enum CodingKeys: String, CodingKey {
+        case amount
+        case countGoods = "count_goods"
+        case contents
+    }
+}
+
 enum ApiErrorStub: Error {
     case fatalError
 }
@@ -193,6 +251,98 @@ final class ResponseCodableTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+<<<<<<< Updated upstream
+=======
+    func testApproveReviewResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/approveReview.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<ApproveReviewResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testAddReviewResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addReview.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<AddReviewResult, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testRemoveReviewResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/removeReview.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<RemoveReviewResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testGetBasketResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/getBasket.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<GetBasketResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testAddBasketResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addToBasket.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<AddBasketResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testDeleteBasketResult() {
+        let errorParser = ErrorParserStub()
+        
+        AF
+            .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/deleteFromBasket.json")
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<DeleteBasketResultStub, AFError>) in
+                switch response.result {
+                case .success(_): break
+                case .failure: XCTFail()
+                }
+                self?.expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 10.0)
+    }
+>>>>>>> Stashed changes
 
     func testExample() throws {
         // This is an example of a functional test case.

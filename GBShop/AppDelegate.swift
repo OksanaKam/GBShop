@@ -10,7 +10,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
     let requestFactory = RequestFactory()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
@@ -72,6 +71,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch response.result {
             case .success(let good):
                 print(good)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let reviewGet = requestFactory.makeReviewsRequestFactory()
+        reviewGet.approveReview(productId: 123) { response in
+            switch response.result {
+            case .success(let reviewGet):
+                print(reviewGet)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let reviewAdd = requestFactory.makeReviewsRequestFactory()
+        reviewAdd.addReview(productId: 123, userName: "Somebody", text: "Хорошие сапоги - надо брать!") { response in
+            switch response.result {
+            case .success(let reviewAdd):
+                print(reviewAdd)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let reviewRemove = requestFactory.makeReviewsRequestFactory()
+        reviewRemove.removeReview(productId: 123, userName: "Somebody", reviewId: 123) { response in
+            switch response.result {
+            case .success(let reviewRemove):
+                print(reviewRemove)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketGet = requestFactory.makeBasketRequestFactory()
+        basketGet.getBasket(idUser: 123) { response in
+            switch response.result {
+            case .success(let basketGet):
+                print(basketGet)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketAdd = requestFactory.makeBasketRequestFactory()
+        basketAdd.addBasket(productId: 123, quantity: 1) { response in
+            switch response.result {
+            case .success(let basketAdd):
+                print(basketAdd)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketDelete = requestFactory.makeBasketRequestFactory()
+        basketDelete.deleteBasket(productId: 123, quantity: 1) { response in
+            switch response.result {
+            case .success(let basketDelete):
+                print(basketDelete)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketPay = requestFactory.makeBasketRequestFactory()
+        basketPay.payBasket(idUser: 123, userCreditCard: 123) { response in
+            switch response.result {
+            case .success(let basketPay):
+                print(basketPay)
             case .failure(let error):
                 print(error.localizedDescription)
             }
