@@ -11,11 +11,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    
+    var startPage: StartPage?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        self.startPage = StartPage(window: self.window)
+        self.startPage?.start()
+        
+        return true
+    }
+    
+    /*
     let requestFactory = RequestFactory()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions:
                      [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         
         let auth = requestFactory.makeAuthRequestFatory()
         auth.login(userName: "Somebody", password: "mypassword") { response in
@@ -77,9 +92,79 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let reviewGet = requestFactory.makeReviewsRequestFactory()
+        reviewGet.approveReview(productId: 123) { response in
+            switch response.result {
+            case .success(let reviewGet):
+                print(reviewGet)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let reviewAdd = requestFactory.makeReviewsRequestFactory()
+        reviewAdd.addReview(productId: 123, userName: "Somebody", text: "Хорошие сапоги - надо брать!") { response in
+            switch response.result {
+            case .success(let reviewAdd):
+                print(reviewAdd)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let reviewRemove = requestFactory.makeReviewsRequestFactory()
+        reviewRemove.removeReview(productId: 123, userName: "Somebody", reviewId: 123) { response in
+            switch response.result {
+            case .success(let reviewRemove):
+                print(reviewRemove)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketGet = requestFactory.makeBasketRequestFactory()
+        basketGet.getBasket(idUser: 123) { response in
+            switch response.result {
+            case .success(let basketGet):
+                print(basketGet)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketAdd = requestFactory.makeBasketRequestFactory()
+        basketAdd.addBasket(productId: 123, quantity: 1) { response in
+            switch response.result {
+            case .success(let basketAdd):
+                print(basketAdd)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketDelete = requestFactory.makeBasketRequestFactory()
+        basketDelete.deleteBasket(productId: 123, quantity: 1) { response in
+            switch response.result {
+            case .success(let basketDelete):
+                print(basketDelete)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basketPay = requestFactory.makeBasketRequestFactory()
+        basketPay.payBasket(idUser: 123, userCreditCard: 123) { response in
+            switch response.result {
+            case .success(let basketPay):
+                print(basketPay)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         return true
     }
-
+*/
     /*
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

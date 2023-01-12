@@ -7,12 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B994BB0F29617EC9005E993D /* AddReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994BB0E29617EC9005E993D /* AddReviewResult.swift */; };
-		B994BB1929617F85005E993D /* ApproveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994BB1829617F85005E993D /* ApproveReviewResult.swift */; };
+		B936CF8F296B249300772061 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936CF8E296B249300772061 /* Basket.swift */; };
+		B936CF91296B24B900772061 /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936CF90296B24B900772061 /* BasketRequestFactory.swift */; };
+		B936CF93296B3BD500772061 /* BasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936CF92296B3BD500772061 /* BasketResult.swift */; };
+		B97E9B60296F4DE3004F7DCD /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9B5F296F4DE3004F7DCD /* Auth.swift */; };
+		B97E9BC729700607004F7DCD /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BC629700607004F7DCD /* StartPage.swift */; };
+		B97E9BC92970066C004F7DCD /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BC82970066C004F7DCD /* TabBarBuilder.swift */; };
+		B97E9BCC2970079A004F7DCD /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BCB2970079A004F7DCD /* AuthInteractor.swift */; };
+		B97E9BCE2970080A004F7DCD /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BCD2970080A004F7DCD /* AuthPresenter.swift */; };
+		B97E9BD0297008DF004F7DCD /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BCF297008DF004F7DCD /* AuthRouter.swift */; };
+		B97E9BD229700975004F7DCD /* AuthAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BD129700975004F7DCD /* AuthAssembler.swift */; };
+		B97E9BD429700AB4004F7DCD /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BD329700AB4004F7DCD /* AuthView.swift */; };
+		B97E9BD629700B47004F7DCD /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BD529700B47004F7DCD /* AuthViewController.swift */; };
+		B97E9BD929701793004F7DCD /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BD829701793004F7DCD /* RegisterInteractor.swift */; };
+		B97E9BDB297017AC004F7DCD /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BDA297017AC004F7DCD /* RegisterPresenter.swift */; };
+		B97E9BDD29701858004F7DCD /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BDC29701858004F7DCD /* RegisterRouter.swift */; };
+		B97E9BDF297018B5004F7DCD /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BDE297018B5004F7DCD /* RegisterAssembler.swift */; };
+		B97E9BE129701903004F7DCD /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BE029701903004F7DCD /* RegisterView.swift */; };
+		B97E9BE42970204C004F7DCD /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BE32970204C004F7DCD /* MainInteractor.swift */; };
+		B97E9BE62970206E004F7DCD /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BE52970206E004F7DCD /* MainPresenter.swift */; };
+		B97E9BE829702080004F7DCD /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BE729702080004F7DCD /* MainRouter.swift */; };
+		B97E9BEA29702095004F7DCD /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BE929702095004F7DCD /* MainAssembler.swift */; };
+		B97E9BEC297020A7004F7DCD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BEB297020A7004F7DCD /* MainView.swift */; };
+		B97E9BEF2970241E004F7DCD /* UserViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BEE2970241E004F7DCD /* UserViewInteractor.swift */; };
+		B97E9BF129702434004F7DCD /* UserViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BF029702434004F7DCD /* UserViewPresenter.swift */; };
+		B97E9BF329702449004F7DCD /* UserViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BF229702449004F7DCD /* UserViewRouter.swift */; };
+		B97E9BF529702468004F7DCD /* UserViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BF429702468004F7DCD /* UserViewAssembler.swift */; };
+		B97E9BF729702479004F7DCD /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BF629702479004F7DCD /* UserView.swift */; };
+		B97E9BFA29702847004F7DCD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BF929702847004F7DCD /* TabBarController.swift */; };
+		B97E9BFD29702DFA004F7DCD /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9BFC29702DFA004F7DCD /* UserSession.swift */; };
+		B97E9C10297049CF004F7DCD /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E9C0F297049CF004F7DCD /* Menu.swift */; };
+		B983F7C7296DAFB1004798C6 /* ApproveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7C6296DAFB1004798C6 /* ApproveReviewResult.swift */; };
+		B983F7C9296DAFEB004798C6 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7C8296DAFEB004798C6 /* Review.swift */; };
+		B983F7CB296DB031004798C6 /* AddReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7CA296DB031004798C6 /* AddReviewResult.swift */; };
+		B983F7CE296DB11D004798C6 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7CD296DB11D004798C6 /* Reviews.swift */; };
+		B983F7D1296DB3B7004798C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7D0296DB3B7004798C6 /* LoginViewController.swift */; };
+		B983F7D3296DB40F004798C6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7D2296DB40F004798C6 /* RegisterViewController.swift */; };
+		B983F7D5296DB42A004798C6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7D4296DB42A004798C6 /* MainViewController.swift */; };
+		B983F7D7296DB44B004798C6 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983F7D6296DB44B004798C6 /* UserViewController.swift */; };
+		B983F7DA296DBABC004798C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B983F7D9296DBABC004798C6 /* Main.storyboard */; };
 		B994BB232961820F005E993D /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994BB222961820F005E993D /* ReviewRequestFactory.swift */; };
-		B994BB2529634FA6005E993D /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994BB2429634FA6005E993D /* Review.swift */; };
 		B994BB2729635054005E993D /* RemoveReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994BB2629635054005E993D /* RemoveReviewResult.swift */; };
-		B994BB29296351D8005E993D /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994BB28296351D8005E993D /* Reviews.swift */; };
 		B99F4602295D9B7A00FC61E3 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4601295D9B7A00FC61E3 /* ResponseCodableTests.swift */; };
 		B99F4605295DB45D00FC61E3 /* ProductResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4604295DB45D00FC61E3 /* ProductResult.swift */; };
 		B99F460F295DB68100FC61E3 /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F460E295DB68100FC61E3 /* CatalogDataResult.swift */; };
@@ -26,6 +61,9 @@
 		B9AB10492951FE9200A6053B /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB10482951FE9200A6053B /* GBShopTests.swift */; };
 		B9AB10532951FE9200A6053B /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB10522951FE9200A6053B /* GBShopUITests.swift */; };
 		B9AB10552951FE9200A6053B /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB10542951FE9200A6053B /* GBShopUITestsLaunchTests.swift */; };
+		B9C67B052969F0FB00121296 /* AddBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C67B042969F0FB00121296 /* AddBasketResult.swift */; };
+		B9C67B072969F12B00121296 /* DeleteBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C67B062969F12B00121296 /* DeleteBasketResult.swift */; };
+		B9C67B092969F15800121296 /* GetBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C67B082969F15800121296 /* GetBasketResult.swift */; };
 		B9E264922959B87B0051EC27 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E264912959B87B0051EC27 /* ErrorParser.swift */; };
 		B9E264942959B8DF0051EC27 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E264932959B8DF0051EC27 /* AbstractErrorParser.swift */; };
 		B9E264962959B94F0051EC27 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E264952959B94F0051EC27 /* DataRequest.swift */; };
@@ -135,12 +173,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B994BB0E29617EC9005E993D /* AddReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewResult.swift; sourceTree = "<group>"; };
-		B994BB1829617F85005E993D /* ApproveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReviewResult.swift; sourceTree = "<group>"; };
+		B936CF8E296B249300772061 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		B936CF90296B24B900772061 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
+		B936CF92296B3BD500772061 /* BasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketResult.swift; sourceTree = "<group>"; };
+		B97E9B5F296F4DE3004F7DCD /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		B97E9BC629700607004F7DCD /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
+		B97E9BC82970066C004F7DCD /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		B97E9BCB2970079A004F7DCD /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		B97E9BCD2970080A004F7DCD /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		B97E9BCF297008DF004F7DCD /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		B97E9BD129700975004F7DCD /* AuthAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembler.swift; sourceTree = "<group>"; };
+		B97E9BD329700AB4004F7DCD /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		B97E9BD529700B47004F7DCD /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B97E9BD829701793004F7DCD /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		B97E9BDA297017AC004F7DCD /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		B97E9BDC29701858004F7DCD /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		B97E9BDE297018B5004F7DCD /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
+		B97E9BE029701903004F7DCD /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B97E9BE32970204C004F7DCD /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		B97E9BE52970206E004F7DCD /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		B97E9BE729702080004F7DCD /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		B97E9BE929702095004F7DCD /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		B97E9BEB297020A7004F7DCD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B97E9BEE2970241E004F7DCD /* UserViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewInteractor.swift; sourceTree = "<group>"; };
+		B97E9BF029702434004F7DCD /* UserViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewPresenter.swift; sourceTree = "<group>"; };
+		B97E9BF229702449004F7DCD /* UserViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewRouter.swift; sourceTree = "<group>"; };
+		B97E9BF429702468004F7DCD /* UserViewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewAssembler.swift; sourceTree = "<group>"; };
+		B97E9BF629702479004F7DCD /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		B97E9BF929702847004F7DCD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B97E9BFC29702DFA004F7DCD /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		B97E9C0F297049CF004F7DCD /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B983F7C6296DAFB1004798C6 /* ApproveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveReviewResult.swift; sourceTree = "<group>"; };
+		B983F7C8296DAFEB004798C6 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		B983F7CA296DB031004798C6 /* AddReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewResult.swift; sourceTree = "<group>"; };
+		B983F7CD296DB11D004798C6 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		B983F7D0296DB3B7004798C6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B983F7D2296DB40F004798C6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B983F7D4296DB42A004798C6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B983F7D6296DB44B004798C6 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B983F7D9296DBABC004798C6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B994BB222961820F005E993D /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
-		B994BB2429634FA6005E993D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		B994BB2629635054005E993D /* RemoveReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveReviewResult.swift; sourceTree = "<group>"; };
-		B994BB28296351D8005E993D /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		B99F4601295D9B7A00FC61E3 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		B99F4604295DB45D00FC61E3 /* ProductResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResult.swift; sourceTree = "<group>"; };
 		B99F460E295DB68100FC61E3 /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
@@ -158,6 +231,9 @@
 		B9AB104E2951FE9200A6053B /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AB10522951FE9200A6053B /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		B9AB10542951FE9200A6053B /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9C67B042969F0FB00121296 /* AddBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBasketResult.swift; sourceTree = "<group>"; };
+		B9C67B062969F12B00121296 /* DeleteBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBasketResult.swift; sourceTree = "<group>"; };
+		B9C67B082969F15800121296 /* GetBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBasketResult.swift; sourceTree = "<group>"; };
 		B9E264912959B87B0051EC27 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		B9E264932959B8DF0051EC27 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		B9E264952959B94F0051EC27 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -204,36 +280,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B994BB1A29618038005E993D /* User */ = {
+		B936CF85296B247D00772061 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				B9E264C32959C54F0051EC27 /* User.swift */,
+				B936CF8E296B249300772061 /* Basket.swift */,
+				B936CF90296B24B900772061 /* BasketRequestFactory.swift */,
+			);
+			name = Basket;
+			sourceTree = "<group>";
+		};
+		B97E9B5E296F4D91004F7DCD /* User */ = {
+			isa = PBXGroup;
+			children = (
 				B9E264C12959C5370051EC27 /* LoginResult.swift */,
 				B9E264CE2959D33F0051EC27 /* LogoutResult.swift */,
 				B9E264D22959D43E0051EC27 /* RegisterUserResult.swift */,
 				B9E264D02959D3A90051EC27 /* ChangeUserDataResult.swift */,
+				B9E264C32959C54F0051EC27 /* User.swift */,
+				B97E9B5F296F4DE3004F7DCD /* Auth.swift */,
+				B97E9BFC29702DFA004F7DCD /* UserSession.swift */,
 			);
-			name = User;
+			path = User;
+			sourceTree = "<group>";
+		};
+		B97E9BBD297005EF004F7DCD /* StartPage */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BC629700607004F7DCD /* StartPage.swift */,
+				B97E9BC82970066C004F7DCD /* TabBarBuilder.swift */,
+			);
+			path = StartPage;
+			sourceTree = "<group>";
+		};
+		B97E9BCA2970076C004F7DCD /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BCB2970079A004F7DCD /* AuthInteractor.swift */,
+				B97E9BCD2970080A004F7DCD /* AuthPresenter.swift */,
+				B97E9BCF297008DF004F7DCD /* AuthRouter.swift */,
+				B97E9BD129700975004F7DCD /* AuthAssembler.swift */,
+				B97E9BD329700AB4004F7DCD /* AuthView.swift */,
+				B97E9BD529700B47004F7DCD /* AuthViewController.swift */,
+			);
+			name = AuthView;
+			sourceTree = "<group>";
+		};
+		B97E9BD72970141A004F7DCD /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BD829701793004F7DCD /* RegisterInteractor.swift */,
+				B97E9BDA297017AC004F7DCD /* RegisterPresenter.swift */,
+				B97E9BDC29701858004F7DCD /* RegisterRouter.swift */,
+				B97E9BDE297018B5004F7DCD /* RegisterAssembler.swift */,
+				B97E9BE029701903004F7DCD /* RegisterView.swift */,
+				B983F7D2296DB40F004798C6 /* RegisterViewController.swift */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		B97E9BE229702010004F7DCD /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BE32970204C004F7DCD /* MainInteractor.swift */,
+				B97E9BE52970206E004F7DCD /* MainPresenter.swift */,
+				B97E9BE729702080004F7DCD /* MainRouter.swift */,
+				B97E9BE929702095004F7DCD /* MainAssembler.swift */,
+				B97E9BEB297020A7004F7DCD /* MainView.swift */,
+				B983F7D4296DB42A004798C6 /* MainViewController.swift */,
+				B97E9C0F297049CF004F7DCD /* Menu.swift */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		B97E9BED297023E2004F7DCD /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BEE2970241E004F7DCD /* UserViewInteractor.swift */,
+				B97E9BF029702434004F7DCD /* UserViewPresenter.swift */,
+				B97E9BF229702449004F7DCD /* UserViewRouter.swift */,
+				B97E9BF429702468004F7DCD /* UserViewAssembler.swift */,
+				B97E9BF629702479004F7DCD /* UserView.swift */,
+				B983F7D6296DB44B004798C6 /* UserViewController.swift */,
+			);
+			path = UserView;
+			sourceTree = "<group>";
+		};
+		B97E9BF82970282A004F7DCD /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BF929702847004F7DCD /* TabBarController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		B983F7BD296DAF88004798C6 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				B983F7C6296DAFB1004798C6 /* ApproveReviewResult.swift */,
+				B983F7C8296DAFEB004798C6 /* Review.swift */,
+				B983F7CA296DB031004798C6 /* AddReviewResult.swift */,
+				B994BB2629635054005E993D /* RemoveReviewResult.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		B983F7CC296DB0F4004798C6 /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				B983F7CD296DB11D004798C6 /* Reviews.swift */,
+				B994BB222961820F005E993D /* ReviewRequestFactory.swift */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		B983F7CF296DB394004798C6 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				B97E9BF82970282A004F7DCD /* TabBar */,
+				B97E9BED297023E2004F7DCD /* UserView */,
+				B97E9BE229702010004F7DCD /* MainView */,
+				B97E9BD72970141A004F7DCD /* RegisterView */,
+				B97E9BCA2970076C004F7DCD /* AuthView */,
+				B983F7D0296DB3B7004798C6 /* LoginViewController.swift */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		B994BB1B29618069005E993D /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				B99F4604295DB45D00FC61E3 /* ProductResult.swift */,
 				B99F460E295DB68100FC61E3 /* CatalogDataResult.swift */,
+				B99F4604295DB45D00FC61E3 /* ProductResult.swift */,
 			);
 			name = Product;
-			sourceTree = "<group>";
-		};
-		B994BB1C296180A4005E993D /* Review */ = {
-			isa = PBXGroup;
-			children = (
-				B994BB1829617F85005E993D /* ApproveReviewResult.swift */,
-				B994BB0E29617EC9005E993D /* AddReviewResult.swift */,
-				B994BB2429634FA6005E993D /* Review.swift */,
-				B994BB2629635054005E993D /* RemoveReviewResult.swift */,
-			);
-			name = Review;
 			sourceTree = "<group>";
 		};
 		B994BB1D29618155005E993D /* Auth */ = {
@@ -248,8 +427,8 @@
 		B994BB1E29618174005E993D /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				B9E264D62959DED00051EC27 /* Register.swift */,
 				B9E264D42959D9C00051EC27 /* RegisterRequestFactory.swift */,
+				B9E264D62959DED00051EC27 /* Register.swift */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -257,8 +436,8 @@
 		B994BB1F2961818D005E993D /* ChangeUserData */ = {
 			isa = PBXGroup;
 			children = (
-				B9E264DA2959E2050051EC27 /* ChangeUserDataRequestFactory.swift */,
 				B9E264D82959E1BB0051EC27 /* ChangeUserData.swift */,
+				B9E264DA2959E2050051EC27 /* ChangeUserDataRequestFactory.swift */,
 			);
 			name = ChangeUserData;
 			sourceTree = "<group>";
@@ -270,15 +449,6 @@
 				B99F4610295DB71400FC61E3 /* ProductRequestFactory.swift */,
 			);
 			name = Product;
-			sourceTree = "<group>";
-		};
-		B994BB21296181CB005E993D /* Review */ = {
-			isa = PBXGroup;
-			children = (
-				B994BB222961820F005E993D /* ReviewRequestFactory.swift */,
-				B994BB28296351D8005E993D /* Reviews.swift */,
-			);
-			name = Review;
 			sourceTree = "<group>";
 		};
 		B9AB10252951FE8800A6053B = {
@@ -311,6 +481,8 @@
 				B9FBCD1C29521B1E000FBE61 /* Core */,
 				B9FBCD1729521ABA000FBE61 /* App */,
 				B9AB10332951FE8900A6053B /* SceneDelegate.swift */,
+				B99F4614295DD40800FC61E3 /* ViewController.swift */,
+				B983F7D9296DBABC004798C6 /* Main.storyboard */,
 			);
 			path = GBShop;
 			sourceTree = "<group>";
@@ -331,6 +503,17 @@
 				B9AB10542951FE9200A6053B /* GBShopUITestsLaunchTests.swift */,
 			);
 			path = GBShopUITests;
+			sourceTree = "<group>";
+		};
+		B9C67AFB2969F0C400121296 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				B9C67B042969F0FB00121296 /* AddBasketResult.swift */,
+				B9C67B062969F12B00121296 /* DeleteBasketResult.swift */,
+				B9C67B082969F15800121296 /* GetBasketResult.swift */,
+				B936CF92296B3BD500772061 /* BasketResult.swift */,
+			);
+			name = Basket;
 			sourceTree = "<group>";
 		};
 		B9E264902959B7D80051EC27 /* Network */ = {
@@ -370,7 +553,8 @@
 		B9E264C52959C6CF0051EC27 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				B994BB21296181CB005E993D /* Review */,
+				B983F7CC296DB0F4004798C6 /* Reviews */,
+				B936CF85296B247D00772061 /* Basket */,
 				B994BB20296181AF005E993D /* Product */,
 				B994BB1F2961818D005E993D /* ChangeUserData */,
 				B994BB1E29618174005E993D /* Register */,
@@ -383,9 +567,9 @@
 		B9FBCD1729521ABA000FBE61 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B97E9BBD297005EF004F7DCD /* StartPage */,
+				B983F7CF296DB394004798C6 /* Flows */,
 				B9AB10312951FE8900A6053B /* AppDelegate.swift */,
-				B99F4614295DD40800FC61E3 /* ViewController.swift */,
-				B9FBCD1B29521B0E000FBE61 /* Flows */,
 				B9FBCD1A29521AF6000FBE61 /* Assembly */,
 				B9FBCD1929521AE3000FBE61 /* Entity */,
 				B9FBCD1829521AC8000FBE61 /* BusinessLogic */,
@@ -404,9 +588,10 @@
 		B9FBCD1929521AE3000FBE61 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				B994BB1C296180A4005E993D /* Review */,
+				B97E9B5E296F4D91004F7DCD /* User */,
+				B983F7BD296DAF88004798C6 /* Review */,
+				B9C67AFB2969F0C400121296 /* Basket */,
 				B994BB1B29618069005E993D /* Product */,
-				B994BB1A29618038005E993D /* User */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -416,13 +601,6 @@
 			children = (
 			);
 			name = Assembly;
-			sourceTree = "<group>";
-		};
-		B9FBCD1B29521B0E000FBE61 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Flows;
 			sourceTree = "<group>";
 		};
 		B9FBCD1C29521B1E000FBE61 /* Core */ = {
@@ -622,6 +800,7 @@
 			files = (
 				B9AB103E2951FE9100A6053B /* LaunchScreen.storyboard in Resources */,
 				B9AB103B2951FE9100A6053B /* Assets.xcassets in Resources */,
+				B983F7DA296DBABC004798C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,35 +826,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E264CB2959C9730051EC27 /* RequestFactory.swift in Sources */,
+				B97E9B60296F4DE3004F7DCD /* Auth.swift in Sources */,
+				B983F7D7296DB44B004798C6 /* UserViewController.swift in Sources */,
 				B9E264D72959DED00051EC27 /* Register.swift in Sources */,
+				B97E9BDB297017AC004F7DCD /* RegisterPresenter.swift in Sources */,
 				B9AB10322951FE8900A6053B /* AppDelegate.swift in Sources */,
+				B9C67B052969F0FB00121296 /* AddBasketResult.swift in Sources */,
 				B9E264CF2959D33F0051EC27 /* LogoutResult.swift in Sources */,
 				B99F4611295DB71400FC61E3 /* ProductRequestFactory.swift in Sources */,
+				B97E9BE129701903004F7DCD /* RegisterView.swift in Sources */,
+				B97E9C10297049CF004F7DCD /* Menu.swift in Sources */,
 				B9E264D32959D43F0051EC27 /* RegisterUserResult.swift in Sources */,
 				B99F4615295DD40800FC61E3 /* ViewController.swift in Sources */,
+				B9C67B092969F15800121296 /* GetBasketResult.swift in Sources */,
 				B994BB2729635054005E993D /* RemoveReviewResult.swift in Sources */,
+				B97E9BCC2970079A004F7DCD /* AuthInteractor.swift in Sources */,
 				B994BB232961820F005E993D /* ReviewRequestFactory.swift in Sources */,
 				B99F4605295DB45D00FC61E3 /* ProductResult.swift in Sources */,
-				B994BB2529634FA6005E993D /* Review.swift in Sources */,
 				B9E264D12959D3A90051EC27 /* ChangeUserDataResult.swift in Sources */,
+				B983F7C9296DAFEB004798C6 /* Review.swift in Sources */,
+				B97E9BE62970206E004F7DCD /* MainPresenter.swift in Sources */,
+				B97E9BD629700B47004F7DCD /* AuthViewController.swift in Sources */,
+				B936CF93296B3BD500772061 /* BasketResult.swift in Sources */,
+				B936CF91296B24B900772061 /* BasketRequestFactory.swift in Sources */,
 				B9E264C22959C5370051EC27 /* LoginResult.swift in Sources */,
+				B97E9BDF297018B5004F7DCD /* RegisterAssembler.swift in Sources */,
+				B97E9BD929701793004F7DCD /* RegisterInteractor.swift in Sources */,
 				B99F460F295DB68100FC61E3 /* CatalogDataResult.swift in Sources */,
 				B9E264962959B94F0051EC27 /* DataRequest.swift in Sources */,
+				B983F7C7296DAFB1004798C6 /* ApproveReviewResult.swift in Sources */,
+				B97E9BE42970204C004F7DCD /* MainInteractor.swift in Sources */,
 				B99F4613295DBC2A00FC61E3 /* Products.swift in Sources */,
+				B983F7D1296DB3B7004798C6 /* LoginViewController.swift in Sources */,
+				B97E9BEF2970241E004F7DCD /* UserViewInteractor.swift in Sources */,
+				B97E9BD229700975004F7DCD /* AuthAssembler.swift in Sources */,
+				B97E9BEA29702095004F7DCD /* MainAssembler.swift in Sources */,
+				B97E9BF729702479004F7DCD /* UserView.swift in Sources */,
+				B97E9BC92970066C004F7DCD /* TabBarBuilder.swift in Sources */,
+				B97E9BF329702449004F7DCD /* UserViewRouter.swift in Sources */,
 				B9E264CD2959D1800051EC27 /* AbstractRequestFactory.swift in Sources */,
+				B97E9BFD29702DFA004F7DCD /* UserSession.swift in Sources */,
+				B983F7D3296DB40F004798C6 /* RegisterViewController.swift in Sources */,
+				B983F7D5296DB42A004798C6 /* MainViewController.swift in Sources */,
+				B97E9BF529702468004F7DCD /* UserViewAssembler.swift in Sources */,
+				B97E9BD429700AB4004F7DCD /* AuthView.swift in Sources */,
 				B9E264C02959C3E20051EC27 /* RequestRouter.swift in Sources */,
 				B9E264C42959C54F0051EC27 /* User.swift in Sources */,
 				B9E264DB2959E2050051EC27 /* ChangeUserDataRequestFactory.swift in Sources */,
+				B97E9BDD29701858004F7DCD /* RegisterRouter.swift in Sources */,
+				B97E9BEC297020A7004F7DCD /* MainView.swift in Sources */,
+				B97E9BD0297008DF004F7DCD /* AuthRouter.swift in Sources */,
 				B9E264C92959C7920051EC27 /* Auth.swift in Sources */,
-				B994BB29296351D8005E993D /* Reviews.swift in Sources */,
 				B9E264C72959C6F00051EC27 /* AuthRequestFactory.swift in Sources */,
+				B936CF8F296B249300772061 /* Basket.swift in Sources */,
 				B9E264922959B87B0051EC27 /* ErrorParser.swift in Sources */,
-				B994BB1929617F85005E993D /* ApproveReviewResult.swift in Sources */,
+				B97E9BFA29702847004F7DCD /* TabBarController.swift in Sources */,
 				B9E264D52959D9C00051EC27 /* RegisterRequestFactory.swift in Sources */,
-				B994BB0F29617EC9005E993D /* AddReviewResult.swift in Sources */,
 				B9AB10342951FE8900A6053B /* SceneDelegate.swift in Sources */,
 				B9E264D92959E1BB0051EC27 /* ChangeUserData.swift in Sources */,
+				B97E9BCE2970080A004F7DCD /* AuthPresenter.swift in Sources */,
+				B97E9BF129702434004F7DCD /* UserViewPresenter.swift in Sources */,
+				B97E9BC729700607004F7DCD /* StartPage.swift in Sources */,
 				B9E264942959B8DF0051EC27 /* AbstractErrorParser.swift in Sources */,
+				B983F7CE296DB11D004798C6 /* Reviews.swift in Sources */,
+				B9C67B072969F12B00121296 /* DeleteBasketResult.swift in Sources */,
+				B983F7CB296DB031004798C6 /* AddReviewResult.swift in Sources */,
+				B97E9BE829702080004F7DCD /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,6 +1069,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -881,6 +1098,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

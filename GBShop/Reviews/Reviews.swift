@@ -2,7 +2,7 @@
 //  Reviews.swift
 //  GBShop
 //
-//  Created by Оксана Каменчук on 02.01.2023.
+//  Created by Оксана Каменчук on 10.01.2023.
 //
 
 import Foundation
