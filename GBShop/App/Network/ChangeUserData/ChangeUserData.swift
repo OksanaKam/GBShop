@@ -24,8 +24,8 @@ class ChangeUserData: AbstractRequestFactory {
 }
 
 extension ChangeUserData: ChangeUserDataRequestFactory {
-    func changeUserData(idUser: Int, userName: String, password: String, email: String, completionHandler: @escaping (Alamofire.AFDataResponse<ChangeUserDataResult>) -> Void) {
-        let requestModel = ChangeUserData(baseUrl: baseUrl, idUser: idUser, login: userName, password: password, email: email)
+    func changeUserData(idUser: Int, userName: String, password: String, email: String, creditCard: String, completionHandler: @escaping (Alamofire.AFDataResponse<ChangeUserDataResult>) -> Void) {
+        let requestModel = ChangeUserData(baseUrl: baseUrl, idUser: idUser, login: userName, password: password, email: email, creditCard: creditCard)
         self.request(request: requestModel, completionHandler: completionHandler)
         }
 }
@@ -39,12 +39,14 @@ extension ChangeUserData {
         let login: String
         let password: String
         let email: String
+        let creditCard: String
         var parameters: Parameters? {
             return [
                 "id_user": idUser,
                 "username": login,
                 "password": password,
                 "email": email,
+                "creditCard": creditCard
             ]
         }
     }
