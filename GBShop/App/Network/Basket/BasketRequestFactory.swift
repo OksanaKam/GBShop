@@ -2,7 +2,7 @@
 //  BasketRequestFactory.swift
 //  GBShop
 //
-//  Created by Оксана Каменчук on 08.01.2023.
+//  Created by Оксана Каменчук on 24.01.2023.
 //
 
 import Foundation
@@ -14,4 +14,3 @@ protocol BasketRequestFactory {
     func deleteBasket(productId: Int, quantity: Int, completionHandler: @escaping (AFDataResponse<DeleteBasketResult>) -> Void)
     func payBasket(idUser: Int, userCreditCard: Int, completionHandler: @escaping (AFDataResponse<GetBasketResult>) -> Void)
 }
-

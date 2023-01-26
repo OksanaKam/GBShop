@@ -1,23 +1,23 @@
 //
-//  AppDelegate.swift
+//  ViewController.swift
 //  GBShop
 //
-//  Created by Оксана Каменчук on 20.12.2022.
+//  Created by Оксана Каменчук on 29.12.2022.
 //
 
 import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class ViewController: UIViewController {
     
     let requestFactory = RequestFactory()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions
-                     launchOptions:
-                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+    func auth(userName: String, password: String) {
         let auth = requestFactory.makeAuthRequestFatory()
-        auth.login(userName: "Somebody", password: "mypassword") { response in
+        auth.login(userName: userName, password: password) { response in
             switch response.result {
             case .success(let login):
                 print(login)
@@ -25,9 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func logout(idUser: Int) {
         let logout = requestFactory.makeLogoutRequestFactory()
-        logout.logout(idUser: 123) { response in
+        logout.logout(idUser: idUser) { response in
             switch response.result {
             case .success(let logout):
                 print(logout)
@@ -35,9 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func changeUserData(idUser: Int, userName: String, password: String, email: String, creditCard: String) {
         let changeUserData = requestFactory.makeChangeDataUserRequsetFactory()
-        changeUserData.changeUserData(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru") { response in
+        changeUserData.changeUserData(idUser: idUser, userName: userName, password: password, email: email, creditCard: creditCard) { response in
             switch response.result {
             case .success(let changeUserData):
                 print(changeUserData)
@@ -45,9 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func registration(idUser: Int, userName: String, password: String, email: String) {
         let registration = requestFactory.makeRegisterRequestFactory()
-        registration.register(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru") { response in
+        registration.register(idUser: idUser, userName: userName, password: password, email: email) { response in
             switch response.result {
             case .success(let registration):
                 print(registration)
@@ -55,9 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func catalog(pageNumber: Int, categoryId: Int) {
         let catalog = requestFactory.makeCatalogRequestFactory()
-        catalog.getProductData(pageNumber: 1, categoryId: 1) { response in
+        catalog.getProductData(pageNumber: pageNumber, categoryId: categoryId) { response in
             switch response.result {
             case .success(let catalog):
                 print(catalog)
@@ -65,9 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func good(productId: Int) {
         let good = requestFactory.makeProductRequestFactory()
-        good.getProduct(productId: 123) { response in
+        good.getProduct(productId: productId) { response in
             switch response.result {
             case .success(let good):
                 print(good)
@@ -75,9 +85,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func reviewGet(productId: Int) {
         let reviewGet = requestFactory.makeReviewsRequestFactory()
-        reviewGet.approveReview(productId: 123) { response in
+        reviewGet.approveReview(productId: productId) { response in
             switch response.result {
             case .success(let reviewGet):
                 print(reviewGet)
@@ -85,9 +97,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func reviewAdd(productId: Int, userName: String, text: String) {
         let reviewAdd = requestFactory.makeReviewsRequestFactory()
-        reviewAdd.addReview(productId: 123, userName: "Somebody", text: "Хорошие сапоги - надо брать!") { response in
+        reviewAdd.addReview(productId: productId, userName: userName, text: text) { response in
             switch response.result {
             case .success(let reviewAdd):
                 print(reviewAdd)
@@ -95,9 +109,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func reviewRemove(productId: Int, userName: String, reviewId: Int) {
         let reviewRemove = requestFactory.makeReviewsRequestFactory()
-        reviewRemove.removeReview(productId: 123, userName: "Somebody", reviewId: 123) { response in
+        reviewRemove.removeReview(productId: productId, userName: userName, reviewId: reviewId) { response in
             switch response.result {
             case .success(let reviewRemove):
                 print(reviewRemove)
@@ -105,9 +121,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func basketGet(idUser: Int) {
         let basketGet = requestFactory.makeBasketRequestFactory()
-        basketGet.getBasket(idUser: 123) { response in
+        basketGet.getBasket(idUser: idUser) { response in
             switch response.result {
             case .success(let basketGet):
                 print(basketGet)
@@ -115,9 +133,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func basketAdd(productId: Int, quantity: Int) {
         let basketAdd = requestFactory.makeBasketRequestFactory()
-        basketAdd.addBasket(productId: 123, quantity: 1) { response in
+        basketAdd.addBasket(productId: productId, quantity: quantity) { response in
             switch response.result {
             case .success(let basketAdd):
                 print(basketAdd)
@@ -125,9 +145,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func basketDelete(productId: Int, quantity: Int) {
         let basketDelete = requestFactory.makeBasketRequestFactory()
-        basketDelete.deleteBasket(productId: 123, quantity: 1) { response in
+        basketDelete.deleteBasket(productId: productId, quantity: quantity) { response in
             switch response.result {
             case .success(let basketDelete):
                 print(basketDelete)
@@ -135,9 +157,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+    }
+    
+    func basketPay(idUser: Int, userCreditCard: Int) {
         let basketPay = requestFactory.makeBasketRequestFactory()
-        basketPay.payBasket(idUser: 123, userCreditCard: 123) { response in
+        basketPay.payBasket(idUser: idUser, userCreditCard: userCreditCard) { response in
             switch response.result {
             case .success(let basketPay):
                 print(basketPay)
@@ -145,31 +169,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
-        return true
     }
+   
 
     /*
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-     */
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
+    */
 
 }
-
