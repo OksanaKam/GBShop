@@ -86,6 +86,12 @@
 		B9E264D72959DED00051EC27 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E264D62959DED00051EC27 /* Register.swift */; };
 		B9E264D92959E1BB0051EC27 /* ChangeUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E264D82959E1BB0051EC27 /* ChangeUserData.swift */; };
 		B9E264DB2959E2050051EC27 /* ChangeUserDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E264DA2959E2050051EC27 /* ChangeUserDataRequestFactory.swift */; };
+		B9F57AEA298BC696007437FB /* ReviewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AE9298BC696007437FB /* ReviewAssembler.swift */; };
+		B9F57AEC298BC6D9007437FB /* ReviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AEB298BC6D9007437FB /* ReviewInteractor.swift */; };
+		B9F57AEE298BC71E007437FB /* ReviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AED298BC71E007437FB /* ReviewPresenter.swift */; };
+		B9F57AF0298BC754007437FB /* ReviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AEF298BC754007437FB /* ReviewRouter.swift */; };
+		B9F57AF2298BDAC6007437FB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AF1298BDAC6007437FB /* ReviewViewController.swift */; };
+		B9F57AF4298BDB2B007437FB /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AF3298BDB2B007437FB /* ReviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +264,12 @@
 		B9E264D62959DED00051EC27 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		B9E264D82959E1BB0051EC27 /* ChangeUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserData.swift; sourceTree = "<group>"; };
 		B9E264DA2959E2050051EC27 /* ChangeUserDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequestFactory.swift; sourceTree = "<group>"; };
+		B9F57AE9298BC696007437FB /* ReviewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewAssembler.swift; sourceTree = "<group>"; };
+		B9F57AEB298BC6D9007437FB /* ReviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInteractor.swift; sourceTree = "<group>"; };
+		B9F57AED298BC71E007437FB /* ReviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresenter.swift; sourceTree = "<group>"; };
+		B9F57AEF298BC754007437FB /* ReviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRouter.swift; sourceTree = "<group>"; };
+		B9F57AF1298BDAC6007437FB /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		B9F57AF3298BDB2B007437FB /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +427,7 @@
 		B9B10EE12979A51500816C3E /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				B9F57AE0298BC44A007437FB /* ReviewView */,
 				B9D2658429800B04009E7447 /* MainView */,
 				B9D26577298007B2009E7447 /* AuthView */,
 				B9D2654E297FF7D1009E7447 /* RegicterView */,
@@ -652,6 +665,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9F57AE0298BC44A007437FB /* ReviewView */ = {
+			isa = PBXGroup;
+			children = (
+				B9F57AE9298BC696007437FB /* ReviewAssembler.swift */,
+				B9F57AEB298BC6D9007437FB /* ReviewInteractor.swift */,
+				B9F57AED298BC71E007437FB /* ReviewPresenter.swift */,
+				B9F57AEF298BC754007437FB /* ReviewRouter.swift */,
+				B9F57AF1298BDAC6007437FB /* ReviewViewController.swift */,
+				B9F57AF3298BDB2B007437FB /* ReviewView.swift */,
+			);
+			path = ReviewView;
+			sourceTree = "<group>";
+		};
 		B9FBCD1D29521B30000FBE61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +890,7 @@
 			files = (
 				B9E264CB2959C9730051EC27 /* RequestFactory.swift in Sources */,
 				B9D26552297FF839009E7447 /* RegisterInteractor.swift in Sources */,
+				B9F57AF2298BDAC6007437FB /* ReviewViewController.swift in Sources */,
 				B9E264D72959DED00051EC27 /* Register.swift in Sources */,
 				B9AB10322951FE8900A6053B /* AppDelegate.swift in Sources */,
 				B9D2657029800690009E7447 /* ApproveReviewResult.swift in Sources */,
@@ -871,6 +898,7 @@
 				B9B10F032979B15200816C3E /* UserView.swift in Sources */,
 				B9B10EF82979B03900816C3E /* TabBarController.swift in Sources */,
 				B9D2656229800080009E7447 /* BasketResult.swift in Sources */,
+				B9F57AF0298BC754007437FB /* ReviewRouter.swift in Sources */,
 				B9D2658C29800BB7009E7447 /* MainRouter.swift in Sources */,
 				B9D2658E29800BE9009E7447 /* MainView.swift in Sources */,
 				B9D2657D29800824009E7447 /* AuthPresenter.swift in Sources */,
@@ -890,14 +918,18 @@
 				B9D26560297FFD62009E7447 /* BasketRequestFactory.swift in Sources */,
 				B99F4615295DD40800FC61E3 /* ViewController.swift in Sources */,
 				B9D26583298008BB009E7447 /* AuthViewController.swift in Sources */,
+				B9F57AEE298BC71E007437FB /* ReviewPresenter.swift in Sources */,
 				B99F4605295DB45D00FC61E3 /* ProductResult.swift in Sources */,
 				B9D2655C297FFA4E009E7447 /* UserAuth.swift in Sources */,
 				B9E264D12959D3A90051EC27 /* ChangeUserDataResult.swift in Sources */,
 				B9B10EFB2979B0E400816C3E /* UserViewInteractor.swift in Sources */,
+				B9F57AEA298BC696007437FB /* ReviewAssembler.swift in Sources */,
 				B9D2656A2980048B009E7447 /* Basket.swift in Sources */,
 				B9E264C22959C5370051EC27 /* LoginResult.swift in Sources */,
+				B9F57AEC298BC6D9007437FB /* ReviewInteractor.swift in Sources */,
 				B9D26579298007CF009E7447 /* AuthAssembler.swift in Sources */,
 				B9E264962959B94F0051EC27 /* DataRequest.swift in Sources */,
+				B9F57AF4298BDB2B007437FB /* ReviewView.swift in Sources */,
 				B9D26550297FF807009E7447 /* RegisterAssembler.swift in Sources */,
 				B99F4613295DBC2A00FC61E3 /* Products.swift in Sources */,
 				B9D2657429800711009E7447 /* ReviewRequestFactory.swift in Sources */,
