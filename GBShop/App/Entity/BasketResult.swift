@@ -2,7 +2,7 @@
 //  BasketResult.swift
 //  GBShop
 //
-//  Created by Оксана Каменчук on 08.01.2023.
+//  Created by Оксана Каменчук on 24.01.2023.
 //
 
 import Foundation
