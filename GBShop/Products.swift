@@ -29,7 +29,7 @@ extension Products: ProductRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func getProductData(pageNumber: Int, categoryId: Int, completionHandler: @escaping (Alamofire.AFDataResponse<CatalogResult>) -> Void) {
+    func getProductData(pageNumber: Int, categoryId: Int, completionHandler: @escaping (Alamofire.AFDataResponse<CatalogDataResult>) -> Void) {
         let requestModel = CatalogData(baseUrl: baseUrl, pageNumber: pageNumber, categoryId: categoryId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

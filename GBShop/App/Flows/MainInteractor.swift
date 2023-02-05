@@ -26,7 +26,7 @@ extension MainViewInteractor: MainViewInteractorProtocol {
         networkService.getProductData(pageNumber: 1, categoryId: 1) { response in
             switch response.result {
             case .success(let catalog):
-                self.presenter?.didLoadCatalog(catalog: catalog.product)
+                self.presenter?.loadCatalog()
             case .failure(let error):
                 print(error)
             }

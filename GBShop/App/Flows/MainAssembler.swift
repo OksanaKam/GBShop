@@ -14,11 +14,11 @@ final class MainViewAssembler {
         let interactor = MainViewInteractor(networkService: catalogNetwork)
         let router = MainViewRouter()
         let presenter = MainViewPresenter(interactor: interactor, router: router)
-        let tableAdapter = Menu()
-        let viewController = MainViewController(presenter: presenter, tableAdapter: tableAdapter)
-        presenter.mainView = viewController
+        let viewController = MainViewController()
+        presenter.mainView = viewController as? any MainViewInput
         interactor.presenter = presenter
         router.viewController = viewController
         return viewController
     }
 }
+

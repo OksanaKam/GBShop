@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 protocol ReviewInput: AnyObject {
     func showAlertController(with error: String)
     func startShowingActivityIndicator()

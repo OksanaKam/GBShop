@@ -183,7 +183,6 @@ final class ReviewView: UIView {
             activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
-        
     }
     
     func presentAlert(error: String) -> UIAlertController {

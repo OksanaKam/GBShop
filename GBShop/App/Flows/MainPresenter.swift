@@ -33,3 +33,4 @@ extension MainViewPresenter: MainViewOutput {
         mainView?.reloadTable(withProducts: catalog)
     }
 }
+

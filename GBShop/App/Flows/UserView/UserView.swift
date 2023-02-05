@@ -34,15 +34,15 @@ final class UserView: UIView {
     }()
     
     private var contentSize: CGSize {
-        CGSize(width: frame.size.width, height: frame.size.height + 40)
+        CGSize(width: frame.size.width, height: frame.size.height + 10)
     }
     
     private(set) lazy var profileLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Profile"
-        label.font = UIFont.boldSystemFont(ofSize: 25)
-        label.textColor = .cyan
+        label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = UIColor(red: 64/255, green: 86/255, blue: 161/255, alpha: 1.0)
         return label
     }()
     
@@ -50,7 +50,7 @@ final class UserView: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "person.fill")
-        imageView.tintColor = .cyan
+        imageView.tintColor = UIColor(red: 241/255, green: 60/255, blue: 32/255, alpha: 1.0)
         return imageView
     }()
     
@@ -168,7 +168,8 @@ final class UserView: UIView {
         button.layer.cornerRadius = 15
         button.setTitle("Edit", for: .normal)
         button.layer.borderWidth = 0.2
-        button.backgroundColor = .cyan
+        button.backgroundColor = UIColor(red: 64/255, green: 86/255, blue: 161/255, alpha: 1.0)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(conformButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -208,7 +209,7 @@ final class UserView: UIView {
         contentView.addSubview(profileLabel)
         
         NSLayoutConstraint.activate([
-            profileLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30),
+            profileLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             profileLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
     }
@@ -217,10 +218,10 @@ final class UserView: UIView {
         contentView.addSubview(avatarImage)
         
         NSLayoutConstraint.activate([
-            avatarImage.topAnchor.constraint(equalTo: profileLabel.bottomAnchor, constant: 10),
+            avatarImage.topAnchor.constraint(equalTo: profileLabel.bottomAnchor, constant: 30),
             avatarImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 40),
             avatarImage.trailingAnchor.constraint(equalTo: contentView.centerXAnchor),
-            avatarImage.heightAnchor.constraint(equalToConstant: 150)
+            avatarImage.heightAnchor.constraint(equalToConstant: 125)
         ])
     }
     
@@ -349,10 +350,10 @@ final class UserView: UIView {
         contentView.addSubview(conformButton)
         
         NSLayoutConstraint.activate([
-            conformButton.topAnchor.constraint(equalTo: bioTextView.bottomAnchor, constant: 15),
+            conformButton.topAnchor.constraint(equalTo: bioTextView.bottomAnchor, constant: 30),
             conformButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            conformButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 150),
-            conformButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -150)
+            conformButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50),
+            conformButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50)
         ])
     }
     
@@ -400,7 +401,6 @@ final class UserView: UIView {
         emailTextField.text = userInfo.email
         userNameTextField.text = userInfo.name
         passwordTextField.text = userInfo.password
-        /*genderButton.setTitle(userInfo.gender, for: .normal)*/
         creditCardTextField.text = userInfo.creditCard
     }
     

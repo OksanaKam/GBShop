@@ -79,5 +79,4 @@ final class MainView: UIView {
             tableView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         ])
     }
-     
 }

@@ -27,6 +27,7 @@ final class AuthView: UIView {
     private(set) lazy var contentView: UIView = {
         let view = UIView()
         view.frame.size = contentSize
+        view.accessibilityIdentifier = "appView"
         return view
     }()
     
@@ -56,6 +57,7 @@ final class AuthView: UIView {
         textField.layer.borderWidth = 0.1
         textField.layer.cornerRadius = 5
         textField.placeholder = "Введите логин"
+        textField.accessibilityIdentifier = "login"
         return textField
     }()
     
@@ -74,6 +76,7 @@ final class AuthView: UIView {
         textField.layer.borderWidth = 0.1
         textField.layer.cornerRadius = 5
         textField.placeholder = "Введите пароль"
+        textField.accessibilityIdentifier = "password"
         return textField
     }()
     
@@ -84,6 +87,7 @@ final class AuthView: UIView {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitleColor(UIColor(red: 64/255, green: 86/255, blue: 161/255, alpha: 1.0), for: .normal)
         button.addTarget(self, action: #selector(registrationButtonTapped), for: .touchUpInside)
+        button .accessibilityIdentifier = "registrationButton"
         return button
     }()
     
@@ -96,6 +100,7 @@ final class AuthView: UIView {
         button.backgroundColor = UIColor(red: 64/255, green: 86/255, blue: 161/255, alpha: 1.0)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        button .accessibilityIdentifier = "loginButton"
         return button
     }()
     

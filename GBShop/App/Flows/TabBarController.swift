@@ -7,55 +7,53 @@
 
 import UIKit
 
+enum Tabs: Int {
+    case catalog
+    case basket
+    case settings
+}
+
 final class TabBarController: UITabBarController {
-    
-    private var controllers: [UIViewController]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAppearance()
+        configure()
     }
-    
-    init(controllers: [UIViewController]) {
-        self.controllers = controllers
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.viewControllers = controllers
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-            return true
-    }
-    
-    private func setupAppearance() {
+    private func configure() {
+        tabBar.tintColor = UIColor(red: 241/255, green: 60/255, blue: 32/255, alpha: 1.0)
+        tabBar.backgroundColor = UIColor(red: 64/255, green: 86/255, blue: 161/255, alpha: 1.0)
         
-        let positionOnX: CGFloat = 30
-        let positionOnY: CGFloat = 5
+        tabBar.layer.borderColor = UIColor(red: 64/255, green: 86/255, blue: 161/255, alpha: 1.0).cgColor
+        tabBar.layer.borderWidth = 1
+        tabBar.layer.masksToBounds = true
         
-        let width = tabBar.bounds.width - positionOnX * 2
-        let height = tabBar.bounds.height + positionOnY * 2
+        let mainController = MainViewController()
+        let basketController = BasketViewController()
+        let userController = UserViewController()
         
-        let roundLayer = CAShapeLayer()
+        let mainNavigationController = UINavigationController(rootViewController: mainController)
+        mainNavigationController.navigationBar.isHidden = true
+        let basketNavigationController = UINavigationController(rootViewController: basketController)
+        basketNavigationController.navigationBar.isHidden = true
+        let userNavigationController = UINavigationController(rootViewController: userController)
+        userNavigationController.navigationBar.isHidden = true
         
-        let bezierPath = UIBezierPath(roundedRect: CGRect(x: positionOnX, y: tabBar.bounds.minY, width: width, height: height), cornerRadius: height/2)
+        mainController.tabBarItem = UITabBarItem(
+            title: Resources.Strings.TabBarHeaders.catalog,
+            image: UIImage(systemName: Resources.Strings.TabBarIconsNames.catalog),
+            tag: Tabs.catalog.rawValue)
+        basketController.tabBarItem = UITabBarItem(
+            title: Resources.Strings.TabBarHeaders.basket,
+            image: UIImage(systemName: Resources.Strings.TabBarIconsNames.basket),
+            tag: Tabs.basket.rawValue)
+        userController.tabBarItem = UITabBarItem(
+            title: Resources.Strings.TabBarHeaders.settings,
+            image: UIImage(systemName: Resources.Strings.TabBarIconsNames.settings),
+            tag: Tabs.settings.rawValue)
         
-        roundLayer.path = bezierPath.cgPath
-        roundLayer.fillColor = UIColor.cyan.cgColor
-        
-        tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
-        tabBar.backgroundColor = .clear
-        tabBar.tintColor = .systemBlue
-        tabBar.unselectedItemTintColor = .systemBlue
-        tabBar.layer.insertSublayer(roundLayer, at: 0)
-        tabBar.itemWidth = width / 5
-        tabBar.itemPositioning = .centered
+        setViewControllers([
+            mainNavigationController,
+            basketNavigationController,
+            userNavigationController
+        ], animated: false)
     }
 }

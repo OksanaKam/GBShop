@@ -11,7 +11,7 @@ protocol UserViewControllerInput {
     func showAlertController(with title: String, error: String)
 }
 
-final class UserViewController: UIViewController {
+final class UserViewController: BaseViewController {
     
     private var userView: UserView {
         guard let view = self.view as? UserView else {
@@ -31,6 +31,7 @@ final class UserViewController: UIViewController {
         userView.creditCardTextField.delegate = self
         self.navigationController?.navigationBar.isHidden = false
         userView.showUserInfo(userInfo: UserSession.instance.user)
+        configure()
     }
     
     func presentAlert(title: String, error: String) -> UIAlertController {

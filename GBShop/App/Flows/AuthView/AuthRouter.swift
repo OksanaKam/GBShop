@@ -19,7 +19,7 @@ final class AuthRouter {
 extension AuthRouter: AuthRouterProtocol {
     func presentShopViewController() {
         DispatchQueue.main.async {
-            let tabBarController = TabBarBuilder.build()
+            let tabBarController = TabBarController()
             self.viewController?.navigationController?.pushViewController(tabBarController, animated: true)
         }
     }

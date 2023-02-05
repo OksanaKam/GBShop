@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/*
 class TabBarBuilder {
     
     static func build() -> (UITabBarController) {
@@ -21,3 +21,4 @@ class TabBarBuilder {
         return tabBarContoller
     }
 }
+*/

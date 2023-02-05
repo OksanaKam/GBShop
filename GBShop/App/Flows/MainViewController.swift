@@ -11,9 +11,20 @@ protocol MainViewInput: AnyObject {
     func reloadTable(withProducts: [CatalogDataResult])
 }
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: - Properties
+    private let tableView = UITableView()
+    private var isFilterShown = false
+    private var heightWithFilterConstraint: NSLayoutConstraint!
+    private let requestFactory = RequestFactory()
+    private var myCatalog = [CatalogDataResult]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     private var mainView: MainView {
         guard let view = self.view as? MainView else {
             let correctView = MainView(frame: self.view.frame)
@@ -25,66 +36,92 @@ final class MainViewController: UIViewController {
     
     var presenter: MainViewPresenter?
     
-    let requestFactory = RequestFactory()
-    
-    var tableAdapter: Menu?
-    
-    init(presenter: MainViewPresenter, tableAdapter: Menu) {
-        super.init(nibName: nil, bundle: nil)
-        self.presenter = presenter
-        self.tableAdapter = tableAdapter
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableAdapter?.categoryHeaderView.delegateCell = self
-        mainView.tableView.delegate = tableAdapter
-        mainView.tableView.dataSource = tableAdapter
+        tableView.delegate = self
+        tableView.dataSource = self
+        addViews()
+        layoutViews()
+        configure()
         
-        presenter?.loadCatalog()
-    }
-}
-
-extension MainViewController: MainViewInput {
-    func reloadTable(withProducts: [CatalogDataResult]) {
-        tableAdapter?.products = withProducts
-        DispatchQueue.main.async {
-            self.mainView.tableView.reloadData()
-        }
-    }
-}
-
-extension MainViewController: CategoryCollectionCellOutput {
-    
-    func categoryCollectionCellDidSelect(_ category: Category) {
-        
-        guard let categories = tableAdapter?.categories else { return }
-        
-        for item in categories {
-            if item.id == category.id {
-                item.selected = true
-            } else {
-                item.selected = false
+        let getCatalog = requestFactory.makeCatalogRequestFactory()
+        getCatalog.getProductData(pageNumber: 1,
+                                  categoryId: 1) { response in
+                switch response.result {
+                case .success(let getCatalog):
+                    self.myCatalog = [getCatalog]
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myCatalog.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = CatalogCell()
+        cell.configureData(
+            name: myCatalog[indexPath.row].productName,
+            picture: myCatalog[indexPath.row].imageUrl)
+        cell.selectionStyle = .none
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productVC = ProductViewController(productID: indexPath.row, productName: myCatalog[indexPath.row].productName)
+        navigationController?.pushViewController(productVC, animated: true)
         
-        tableAdapter?.categoryHeaderView.update(categories)
-        
-        var row = 0
-        
-        switch category.name {
-        case "Ноутбуки": row = 0
-        case "Мышки": row = 1
-        case "Мониторы": row = 2
-        case "Клавиатуры": row = 3
-        case "Наушники": row = 4
-        default: break
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 135
+    }
+}
+
+@objc extension MainViewController {
+    override func addViews() {
+        super.addViews()
+        view.addSubview(tableView)
+    }
+    override func layoutViews() {
+        super.layoutViews()
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        heightWithFilterConstraint = headerView.heightAnchor.constraint(equalToConstant: 100)
+    }
+    override func configure() {
+        super.configure()
+        headerTitle.text = "Каталог"
+        setLeftHeaderButton(image: UIImage(named: "back_arrow_icon") ?? UIImage(), selector: #selector(backButtonPressed))
+        setRightHeaderButton(image: UIImage(named: "filter_inactive_icon.png") ?? UIImage(), selector: #selector(filterButtonPressed))
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    func backButtonPressed() {
+        self.dismiss(animated: true)
+    }
+    func filterButtonPressed() {
+        if headerView.translatesAutoresizingMaskIntoConstraints {
+            headerView.translatesAutoresizingMaskIntoConstraints.toggle()
         }
-        
-        mainView.tableView.scrollToRow(at: IndexPath(row: row, section: 1), at: .top, animated: true)
+        if !isFilterShown {
+            isFilterShown.toggle()
+            self.heightWithFilterConstraint.constant = 150
+            UIView.animate(withDuration: 0.5) {
+                self.heightWithFilterConstraint.isActive = true
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            isFilterShown.toggle()
+            self.heightWithFilterConstraint.constant = 100
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
 }

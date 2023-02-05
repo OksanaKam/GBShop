@@ -22,9 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        /*let rootVC = AuthAssembler.build(requestFactory: requestFactory)*/
+        let rootVC = AuthAssembler.build(requestFactory: requestFactory)
         /*let rootVC = MainViewAssembler.build(requestFactory: requestFactory)*/
-        let rootVC = ReviewAssembler.build(requestFactory: requestFactory)
+        /*let rootVC = ReviewAssembler.build(requestFactory: requestFactory)*/
+        /*let rootVC = BasketAssembler.build(requestFactory: requestFactory)*/
+        /*let rootVC = ProductViewController(productID: 1, productName: "Макбук")*/
+        /*let rootVC = TabBarController()*/
         rootVC.navigationItem.title = "Login"
         
         let navVC = self.configuredNavigationController

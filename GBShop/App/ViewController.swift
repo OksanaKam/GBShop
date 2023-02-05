@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     func auth(userName: String, password: String) {
         let auth = requestFactory.makeAuthRequestFatory()
-        auth.login(userName: userName, password: password) { response in
+        auth.login(userName: "Somebody", password: "password") { response in
             switch response.result {
             case .success(let login):
                 print(login)
