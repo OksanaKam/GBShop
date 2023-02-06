@@ -251,8 +251,6 @@ final class ResponseCodableTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-<<<<<<< Updated upstream
-=======
     func testApproveReviewResult() {
         let errorParser = ErrorParserStub()
         
@@ -273,7 +271,7 @@ final class ResponseCodableTests: XCTestCase {
         
         AF
             .request("https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/addReview.json")
-            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<AddReviewResult, AFError>) in
+            .responseCodable(errorParser: errorParser) { [weak self] (response: DataResponse<AddReviewResultStub, AFError>) in
                 switch response.result {
                 case .success(_): break
                 case .failure: XCTFail()
@@ -342,7 +340,7 @@ final class ResponseCodableTests: XCTestCase {
             }
         wait(for: [expectation], timeout: 10.0)
     }
->>>>>>> Stashed changes
+    
 
     func testExample() throws {
         // This is an example of a functional test case.
