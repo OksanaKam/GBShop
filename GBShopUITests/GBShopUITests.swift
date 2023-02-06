@@ -26,8 +26,31 @@ final class GBShopUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        print(app.debugDescription)
+        
+        let appView = app.otherElements["appView"].firstMatch
+        
+        let loginTextField = appView.textFields["login"].firstMatch
+        XCTAssert(loginTextField.exists)
+        
+        let passwordTextField = appView.secureTextFields["password"].firstMatch
+        XCTAssert(passwordTextField.exists)
+        
+        let loginButton = appView.buttons["loginButton"].firstMatch
+        XCTAssert(loginButton.exists)
+        
+        let registrationButton = appView.buttons["registrationButton"].firstMatch
+        XCTAssert(registrationButton.exists)
+        
+        loginTextField.tap()
+        loginTextField.typeText("login")
+        
+        passwordTextField.tap()
+        passwordTextField.typeText("password")
+        
+        loginButton.tap()
+                
     }
 
     func testLaunchPerformance() throws {
