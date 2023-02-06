@@ -42,7 +42,6 @@
 		B9AB10532951FE9200A6053B /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB10522951FE9200A6053B /* GBShopUITests.swift */; };
 		B9AB10552951FE9200A6053B /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AB10542951FE9200A6053B /* GBShopUITestsLaunchTests.swift */; };
 		B9B10EF12979ABA800816C3E /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B10EF02979ABA800816C3E /* CatalogDataResult.swift */; };
-		B9B10EF52979AFA400816C3E /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B10EF42979AFA400816C3E /* TabBarBuilder.swift */; };
 		B9B10EF82979B03900816C3E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B10EF72979B03900816C3E /* TabBarController.swift */; };
 		B9B10EFB2979B0E400816C3E /* UserViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B10EFA2979B0E400816C3E /* UserViewInteractor.swift */; };
 		B9B10EFD2979B10C00816C3E /* UserViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B10EFC2979B10C00816C3E /* UserViewPresenter.swift */; };
@@ -256,7 +255,6 @@
 		B9AB10522951FE9200A6053B /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		B9AB10542951FE9200A6053B /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9B10EF02979ABA800816C3E /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
-		B9B10EF42979AFA400816C3E /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarBuilder.swift; path = ../TabBarBuilder.swift; sourceTree = "<group>"; };
 		B9B10EF72979B03900816C3E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B9B10EFA2979B0E400816C3E /* UserViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewInteractor.swift; sourceTree = "<group>"; };
 		B9B10EFC2979B10C00816C3E /* UserViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewPresenter.swift; sourceTree = "<group>"; };
@@ -715,7 +713,6 @@
 		B9B10EF62979B01000816C3E /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				B9B10EF42979AFA400816C3E /* TabBarBuilder.swift */,
 				B9B10EF72979B03900816C3E /* TabBarController.swift */,
 			);
 			name = TabBar;
@@ -1090,7 +1087,6 @@
 				B9B10EF12979ABA800816C3E /* CatalogDataResult.swift in Sources */,
 				B938913D298D91DD005E7A40 /* UIView.swift in Sources */,
 				B9389122298D45DD005E7A40 /* BasketAssembler.swift in Sources */,
-				B9B10EF52979AFA400816C3E /* TabBarBuilder.swift in Sources */,
 				B9D26566298003AC009E7447 /* DeleteBasketResult.swift in Sources */,
 				B9D26556297FF8AA009E7447 /* RegisterRouter.swift in Sources */,
 				B9B6D957298ED76B00A094CF /* ProductDescriptionCell.swift in Sources */,

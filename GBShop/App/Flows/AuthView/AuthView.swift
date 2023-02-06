@@ -210,11 +210,7 @@ final class AuthView: UIView {
             registrationButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
-    /*
-    private func addCrashButton() {
-        contentView.addSubview(crashButton)
-    }
-    */
+    
     private func addActivityIndicator() {
         contentView.addSubview(activityIndicator)
         
