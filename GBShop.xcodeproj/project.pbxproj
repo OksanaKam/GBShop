@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64BD377E49DD8714C31B305E /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0690C8AE80AEA5DBB7F18D /* Pods_GBShop.framework */; };
 		B9389122298D45DD005E7A40 /* BasketAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9389121298D45DD005E7A40 /* BasketAssembler.swift */; };
 		B9389124298D460D005E7A40 /* BasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9389123298D460D005E7A40 /* BasketInteractor.swift */; };
 		B9389126298D4638005E7A40 /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9389125298D4638005E7A40 /* BasketPresenter.swift */; };
@@ -63,12 +64,6 @@
 		B9B6D95A298ED7F000A094CF /* ProductTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6D959298ED7F000A094CF /* ProductTagView.swift */; };
 		B9B6D964298ED8A100A094CF /* QuantityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6D963298ED8A100A094CF /* QuantityControl.swift */; };
 		B9B6D966298ED8D600A094CF /* AddToBasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B6D965298ED8D600A094CF /* AddToBasketButton.swift */; };
-		B9B6D97929901B2700A094CF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B9B6D97829901B2700A094CF /* FirebaseAnalytics */; };
-		B9B6D97B29901B2700A094CF /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = B9B6D97A29901B2700A094CF /* FirebaseAnalyticsOnDeviceConversion */; };
-		B9B6D97D29901B2700A094CF /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B9B6D97C29901B2700A094CF /* FirebaseAnalyticsSwift */; };
-		B9B6D97F29901B2700A094CF /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = B9B6D97E29901B2700A094CF /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		B9B6D98129901B2700A094CF /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = B9B6D98029901B2700A094CF /* FirebaseAppCheck */; };
-		B9B6D98329901B2700A094CF /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B9B6D98229901B2700A094CF /* FirebaseAppDistribution-Beta */; };
 		B9D26550297FF807009E7447 /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D2654F297FF807009E7447 /* RegisterAssembler.swift */; };
 		B9D26552297FF839009E7447 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D26551297FF839009E7447 /* RegisterInteractor.swift */; };
 		B9D26554297FF874009E7447 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D26553297FF874009E7447 /* RegisterPresenter.swift */; };
@@ -126,6 +121,8 @@
 		B9F57AF0298BC754007437FB /* ReviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AEF298BC754007437FB /* ReviewRouter.swift */; };
 		B9F57AF2298BDAC6007437FB /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AF1298BDAC6007437FB /* ReviewViewController.swift */; };
 		B9F57AF4298BDB2B007437FB /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F57AF3298BDB2B007437FB /* ReviewView.swift */; };
+		C0300D93531534961B6724BA /* Pods_GBShop_GBShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31964AA9328A1EEA0E165DF /* Pods_GBShop_GBShopUITests.framework */; };
+		CCD843279396544EA09F44E0 /* Pods_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730854D63087D653B89F799F /* Pods_GBShopTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +213,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A211D3B25985A6CE996F3B8 /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A0690C8AE80AEA5DBB7F18D /* Pods_GBShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF9DB7E6E57A1AD9C4EF619 /* Pods-GBShop-GBShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopUITests/Pods-GBShop-GBShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		730854D63087D653B89F799F /* Pods_GBShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73D7FFB62442A5C4124F311F /* Pods-GBShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.release.xcconfig"; path = "Target Support Files/Pods-GBShopTests/Pods-GBShopTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F51004483D62F8AA465E739 /* Pods-GBShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.release.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.release.xcconfig"; sourceTree = "<group>"; };
+		B4F14232F50E20FD24555943 /* Pods-GBShop-GBShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop-GBShopUITests.release.xcconfig"; path = "Target Support Files/Pods-GBShop-GBShopUITests/Pods-GBShop-GBShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B9389121298D45DD005E7A40 /* BasketAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketAssembler.swift; sourceTree = "<group>"; };
 		B9389123298D460D005E7A40 /* BasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInteractor.swift; sourceTree = "<group>"; };
 		B9389125298D4638005E7A40 /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
@@ -332,6 +336,8 @@
 		B9F57AEF298BC754007437FB /* ReviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRouter.swift; sourceTree = "<group>"; };
 		B9F57AF1298BDAC6007437FB /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		B9F57AF3298BDB2B007437FB /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		D31964AA9328A1EEA0E165DF /* Pods_GBShop_GBShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShop_GBShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B5D914099AA7421CFA74E5 /* Pods-GBShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.debug.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,13 +345,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B6D98329901B2700A094CF /* FirebaseAppDistribution-Beta in Frameworks */,
-				B9B6D97D29901B2700A094CF /* FirebaseAnalyticsSwift in Frameworks */,
-				B9B6D97F29901B2700A094CF /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				B9B6D97929901B2700A094CF /* FirebaseAnalytics in Frameworks */,
-				B9B6D97B29901B2700A094CF /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				B9B6D98129901B2700A094CF /* FirebaseAppCheck in Frameworks */,
 				B9D265C4298032E3009E7447 /* Alamofire.framework in Frameworks */,
+				64BD377E49DD8714C31B305E /* Pods_GBShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD843279396544EA09F44E0 /* Pods_GBShopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +362,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0300D93531534961B6724BA /* Pods_GBShop_GBShopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BEDB2F699BBF70EA65E0BC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7B5D914099AA7421CFA74E5 /* Pods-GBShop.debug.xcconfig */,
+				8F51004483D62F8AA465E739 /* Pods-GBShop.release.xcconfig */,
+				6DF9DB7E6E57A1AD9C4EF619 /* Pods-GBShop-GBShopUITests.debug.xcconfig */,
+				B4F14232F50E20FD24555943 /* Pods-GBShop-GBShopUITests.release.xcconfig */,
+				0A211D3B25985A6CE996F3B8 /* Pods-GBShopTests.debug.xcconfig */,
+				73D7FFB62442A5C4124F311F /* Pods-GBShopTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B9389118298D4592005E7A40 /* BasketView */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +493,7 @@
 				B9AB10512951FE9200A6053B /* GBShopUITests */,
 				B9AB102F2951FE8900A6053B /* Products */,
 				B9E264BB2959BDD30051EC27 /* Frameworks */,
+				8BEDB2F699BBF70EA65E0BC2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -797,6 +815,9 @@
 		B9E264BB2959BDD30051EC27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A0690C8AE80AEA5DBB7F18D /* Pods_GBShop.framework */,
+				D31964AA9328A1EEA0E165DF /* Pods_GBShop_GBShopUITests.framework */,
+				730854D63087D653B89F799F /* Pods_GBShopTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -830,6 +851,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9AB10582951FE9200A6053B /* Build configuration list for PBXNativeTarget "GBShop" */;
 			buildPhases = (
+				95982036C8EB25D5C7774487 /* [CP] Check Pods Manifest.lock */,
 				B9AB102A2951FE8900A6053B /* Sources */,
 				B9AB102B2951FE8900A6053B /* Frameworks */,
 				B9AB102C2951FE8900A6053B /* Resources */,
@@ -841,14 +863,6 @@
 			dependencies = (
 			);
 			name = GBShop;
-			packageProductDependencies = (
-				B9B6D97829901B2700A094CF /* FirebaseAnalytics */,
-				B9B6D97A29901B2700A094CF /* FirebaseAnalyticsOnDeviceConversion */,
-				B9B6D97C29901B2700A094CF /* FirebaseAnalyticsSwift */,
-				B9B6D97E29901B2700A094CF /* FirebaseAnalyticsWithoutAdIdSupport */,
-				B9B6D98029901B2700A094CF /* FirebaseAppCheck */,
-				B9B6D98229901B2700A094CF /* FirebaseAppDistribution-Beta */,
-			);
 			productName = GBShop;
 			productReference = B9AB102E2951FE8900A6053B /* GBShop.app */;
 			productType = "com.apple.product-type.application";
@@ -857,6 +871,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9AB105B2951FE9200A6053B /* Build configuration list for PBXNativeTarget "GBShopTests" */;
 			buildPhases = (
+				5A49D98B8F1FCDCFBD0085D9 /* [CP] Check Pods Manifest.lock */,
 				B9AB10402951FE9200A6053B /* Sources */,
 				B9AB10412951FE9200A6053B /* Frameworks */,
 				B9AB10422951FE9200A6053B /* Resources */,
@@ -875,6 +890,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9AB105E2951FE9200A6053B /* Build configuration list for PBXNativeTarget "GBShopUITests" */;
 			buildPhases = (
+				5CC0834F21CBCA1AD4751A5D /* [CP] Check Pods Manifest.lock */,
 				B9AB104A2951FE9200A6053B /* Sources */,
 				B9AB104B2951FE9200A6053B /* Frameworks */,
 				B9AB104C2951FE9200A6053B /* Resources */,
@@ -913,7 +929,7 @@
 				};
 			};
 			buildConfigurationList = B9AB10292951FE8800A6053B /* Build configuration list for PBXProject "GBShop" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -922,8 +938,7 @@
 			);
 			mainGroup = B9AB10252951FE8800A6053B;
 			packageReferences = (
-				B9D265A629803025009E7447 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B9D265A629803025009E7447 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 			);
 			productRefGroup = B9AB102F2951FE8900A6053B /* Products */;
 			projectDirPath = "";
@@ -1029,6 +1044,72 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5A49D98B8F1FCDCFBD0085D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC0834F21CBCA1AD4751A5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShop-GBShopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95982036C8EB25D5C7774487 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B987611C2990223A0047EBBA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1037,8 +1118,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputFileListPaths = (
 			);
@@ -1046,7 +1125,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1323,12 +1402,13 @@
 		};
 		B9AB10592951FE9200A6053B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B5D914099AA7421CFA74E5 /* Pods-GBShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = HSKY5AD59J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBShop/Info.plist;
@@ -1352,11 +1432,13 @@
 		};
 		B9AB105A2951FE9200A6053B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F51004483D62F8AA465E739 /* Pods-GBShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = HSKY5AD59J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBShop/Info.plist;
@@ -1380,6 +1462,7 @@
 		};
 		B9AB105C2951FE9200A6053B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A211D3B25985A6CE996F3B8 /* Pods-GBShopTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1400,6 +1483,7 @@
 		};
 		B9AB105D2951FE9200A6053B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73D7FFB62442A5C4124F311F /* Pods-GBShopTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1420,6 +1504,7 @@
 		};
 		B9AB105F2951FE9200A6053B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DF9DB7E6E57A1AD9C4EF619 /* Pods-GBShop-GBShopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1438,6 +1523,7 @@
 		};
 		B9AB10602951FE9200A6053B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F14232F50E20FD24555943 /* Pods-GBShop-GBShopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1496,15 +1582,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		B9D265A629803025009E7447 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		B9D265A629803025009E7447 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1513,39 +1591,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B9B6D97829901B2700A094CF /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		B9B6D97A29901B2700A094CF /* FirebaseAnalyticsOnDeviceConversion */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsOnDeviceConversion;
-		};
-		B9B6D97C29901B2700A094CF /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		B9B6D97E29901B2700A094CF /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		B9B6D98029901B2700A094CF /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		B9B6D98229901B2700A094CF /* FirebaseAppDistribution-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9B6D97729901B2700A094CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAppDistribution-Beta";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9AB10262951FE8800A6053B /* Project object */;
 }
