@@ -103,7 +103,7 @@ final class AuthView: UIView {
         button .accessibilityIdentifier = "loginButton"
         return button
     }()
-    
+   
     var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -210,7 +210,11 @@ final class AuthView: UIView {
             registrationButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
-    
+    /*
+    private func addCrashButton() {
+        contentView.addSubview(crashButton)
+    }
+    */
     private func addActivityIndicator() {
         contentView.addSubview(activityIndicator)
         
@@ -257,6 +261,7 @@ final class AuthView: UIView {
     }
     
     @objc func loginButtonTapped(sender: UIButton) {
+        userNameTextField.text!.isEmpty ? CrashlyticsService.shared.sendReport(action: .correctLogin) : CrashlyticsService.shared.sendReport(action: .incorrectLogin)
         guard
             let login = userNameTextField.text,
             let password = passwordTextField.text

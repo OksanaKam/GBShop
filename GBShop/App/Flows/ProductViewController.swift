@@ -49,6 +49,7 @@ final class ProductViewController: BaseViewController, UITableViewDelegate, UITa
         addViews()
         layoutViews()
         configure()
+        CrashlyticsService.shared.sendReport(action: .openProduct)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -158,6 +159,7 @@ extension ProductViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func addToBasket() {
+        CrashlyticsService.shared.sendReport(action: .addToBasket)
         if let product = self.product {
             var isAlreadyExistsIndex = -1
             for index in BasketDataSingleton.shared.basketData.indices {

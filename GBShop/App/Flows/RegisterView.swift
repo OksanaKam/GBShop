@@ -392,6 +392,7 @@ final class RegisterView: UIView {
     }
     
     @objc func signUpButtonTapped(sender: UIButton) {
+        CrashlyticsService.shared.sendReport(action: .registration)
         guard
             let email = emailTextField.text,
                 let userName = userNameTextField.text,

@@ -54,6 +54,7 @@ final class MainViewController: BaseViewController, UITableViewDelegate, UITable
                     print(error.localizedDescription)
             }
         }
+        CrashlyticsService.shared.sendReport(action: .openCatalog)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -103,6 +104,7 @@ final class MainViewController: BaseViewController, UITableViewDelegate, UITable
         tableView.translatesAutoresizingMaskIntoConstraints = false
     }
     func backButtonPressed() {
+        CrashlyticsService.shared.sendReport(action: .logout)
         self.dismiss(animated: true)
     }
     func filterButtonPressed() {

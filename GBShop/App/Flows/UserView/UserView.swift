@@ -405,6 +405,7 @@ final class UserView: UIView {
     }
     
     @objc func conformButtonTapped(sender: UIButton) {
+        CrashlyticsService.shared.sendReport(action: .logout)
         guard
             let email = emailTextField.text,
             let userName = userNameTextField.text,
